@@ -13,7 +13,7 @@
         ></v-img>
       </v-flex>
 
-      <v-flex mb-4>
+      <v-flex  mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to Vuetify
         </h1>
