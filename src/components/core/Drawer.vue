@@ -13,11 +13,8 @@
       :src="image"
       height="100%"
     >
-      <v-layout
-        class="fill-height"
-        tag="v-list"
-        column
-      >
+      
+      <v-list>
         <v-list-tile avatar>
           <v-list-tile-avatar
             color="white"
@@ -70,7 +67,7 @@
             Upgrade To PRO
           </v-list-tile-title>
         </v-list-tile>
-      </v-layout>
+      </v-list>
     </v-img>
   </v-navigation-drawer>
 </template>

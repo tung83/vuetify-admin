@@ -13,7 +13,9 @@
 export default {
   metaInfo () {
     return {
-      title: 'Vuetify Material Dashboard by CreativeTim'
+      title: 'Admin Vuetify Material',
+      // all titles will be injected into this template
+      titleTemplate: '%s | My Awesome Webapp'
     }
   }
 }

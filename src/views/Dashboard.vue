@@ -361,14 +361,18 @@
 
 <script>
 export default {
-  data () {
+  metaInfo: {
+    // title will be injected into parent titleTemplate
+    title: "About Us Tung",
+      // override the parent template and just use the above title only
+    titleTemplate: null
+  },
+  data() {
     return {
       dailySalesChart: {
         data: {
-          labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-          series: [
-            [12, 17, 7, 17, 23, 18, 38]
-          ]
+          labels: ["M", "T", "W", "T", "F", "S", "S"],
+          series: [[12, 17, 7, 17, 23, 18, 38]]
         },
         options: {
           lineSmooth: this.$chartist.Interpolation.cardinal({
@@ -386,10 +390,8 @@ export default {
       },
       dataCompletedTasksChart: {
         data: {
-          labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
-          series: [
-            [230, 750, 450, 300, 280, 240, 200, 190]
-          ]
+          labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
+          series: [[230, 750, 450, 300, 280, 240, 200, 190]]
         },
         options: {
           lineSmooth: this.$chartist.Interpolation.cardinal({
@@ -407,11 +409,21 @@ export default {
       },
       emailsSubscriptionChart: {
         data: {
-          labels: ['Ja', 'Fe', 'Ma', 'Ap', 'Mai', 'Ju', 'Jul', 'Au', 'Se', 'Oc', 'No', 'De'],
-          series: [
-            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
-
-          ]
+          labels: [
+            "Ja",
+            "Fe",
+            "Ma",
+            "Ap",
+            "Mai",
+            "Ju",
+            "Jul",
+            "Au",
+            "Se",
+            "Oc",
+            "No",
+            "De"
+          ],
+          series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]]
         },
         options: {
           axisX: {
@@ -427,73 +439,79 @@ export default {
           }
         },
         responsiveOptions: [
-          ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0]
+          [
+            "screen and (max-width: 640px)",
+            {
+              seriesBarDistance: 5,
+              axisX: {
+                labelInterpolationFnc: function(value) {
+                  return value[0];
+                }
               }
             }
-          }]
+          ]
         ]
       },
       headers: [
         {
           sortable: false,
-          text: 'ID',
-          value: 'id'
+          text: "ID",
+          value: "id"
         },
         {
           sortable: false,
-          text: 'Name',
-          value: 'name'
+          text: "Name",
+          value: "name"
         },
         {
           sortable: false,
-          text: 'Salary',
-          value: 'salary',
-          align: 'right'
+          text: "Salary",
+          value: "salary",
+          align: "right"
         },
         {
           sortable: false,
-          text: 'Country',
-          value: 'country',
-          align: 'right'
+          text: "Country",
+          value: "country",
+          align: "right"
         },
         {
           sortable: false,
-          text: 'City',
-          value: 'city',
-          align: 'right'
+          text: "City",
+          value: "city",
+          align: "right"
         }
       ],
       items: [
         {
-          name: 'Dakota Rice',
-          country: 'Niger',
-          city: 'Oud-Tunrhout',
-          salary: '$35,738'
+          name: "Dakota Rice",
+          country: "Niger",
+          city: "Oud-Tunrhout",
+          salary: "$35,738"
         },
         {
-          name: 'Minerva Hooper',
-          country: 'Curaçao',
-          city: 'Sinaai-Waas',
-          salary: '$23,738'
-        }, {
-          name: 'Sage Rodriguez',
-          country: 'Netherlands',
-          city: 'Overland Park',
-          salary: '$56,142'
-        }, {
-          name: 'Philip Chanley',
-          country: 'Korea, South',
-          city: 'Gloucester',
-          salary: '$38,735'
-        }, {
-          name: 'Doris Greene',
-          country: 'Malawi',
-          city: 'Feldkirchen in Kārnten',
-          salary: '$63,542'
+          name: "Minerva Hooper",
+          country: "Curaçao",
+          city: "Sinaai-Waas",
+          salary: "$23,738"
+        },
+        {
+          name: "Sage Rodriguez",
+          country: "Netherlands",
+          city: "Overland Park",
+          salary: "$56,142"
+        },
+        {
+          name: "Philip Chanley",
+          country: "Korea, South",
+          city: "Gloucester",
+          salary: "$38,735"
+        },
+        {
+          name: "Doris Greene",
+          country: "Malawi",
+          city: "Feldkirchen in Kārnten",
+          salary: "$63,542"
         }
       ],
       tabs: 0,
@@ -502,12 +520,12 @@ export default {
         1: false,
         2: false
       }
-    }
+    };
   },
   methods: {
-    complete (index) {
-      this.list[index] = !this.list[index]
+    complete(index) {
+      this.list[index] = !this.list[index];
     }
   }
-}
+};
 </script>
