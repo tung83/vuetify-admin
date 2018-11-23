@@ -38,6 +38,7 @@
           color="purple"
         />
         <router-link
+          v-ripple
           class="toolbar-items"
           to="/"
         >
@@ -50,6 +51,7 @@
           offset-y
           transition="slide-y-transition">
           <router-link
+            v-ripple
             slot="activator"
             class="toolbar-items"
             to="/notifications"
@@ -79,6 +81,7 @@
           </v-card>
         </v-menu>
         <router-link
+          v-ripple
           class="toolbar-items"
           to="/user-profile"
         >

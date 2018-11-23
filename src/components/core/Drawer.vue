@@ -13,8 +13,11 @@
       :src="image"
       height="100%"
     >
-      
-      <v-list>
+      <v-layout
+        class="fill-height"
+        tag="v-list"
+        column
+      >
         <v-list-tile avatar>
           <v-list-tile-avatar
             color="white"
@@ -67,7 +70,7 @@
             Upgrade To PRO
           </v-list-tile-title>
         </v-list-tile>
-      </v-list>
+      </v-layout>
     </v-img>
   </v-navigation-drawer>
 </template>
@@ -83,6 +86,11 @@ export default {
   data: () => ({
     logo: './img/vuetifylogo.png',
     links: [
+      {
+        to: '/students',
+        icon: 'mdi-account-multiple',
+        text: 'Student'
+      },
       {
         to: '/dashboard',
         icon: 'mdi-view-dashboard',
