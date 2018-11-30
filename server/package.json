@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
